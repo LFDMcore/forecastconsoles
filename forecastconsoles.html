@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Digital Opportunity for Forecast Consoles | Presented by LFDM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(120deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+        .section-title {
+            @apply text-3xl md:text-4xl font-extrabold text-gray-800 mb-4;
+        }
+        .section-subtitle {
+            @apply text-lg md:text-xl text-gray-600 max-w-3xl mx-auto;
+        }
+        .card {
+            @apply bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300;
+        }
+        .stat-card {
+            @apply bg-white p-6 rounded-2xl shadow-md border border-gray-100 text-center;
+        }
+        .cta-button {
+            @apply bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg text-xl transition-transform duration-300 transform hover:scale-105;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header & Hero Section -->
+    <header class="gradient-bg text-white shadow-2xl">
+        <div class="container mx-auto px-6 py-8 md:py-12">
+            <div class="flex justify-between items-center">
+                <img src="https://storage.googleapis.com/gemini-prod-us-west1-409903-output-scratch/img_1718815777416_0.png" alt="LFDM Logo" class="h-12 invert">
+                <h1 class="text-xl md:text-2xl font-bold">Digital Opportunity Analysis</h1>
+            </div>
+            <div class="text-center py-16 md:py-24">
+                <h2 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Bill, let’s talk about the future of Forecast Consoles.</h2>
+                <p class="text-xl md:text-2xl opacity-90 max-w-4xl mx-auto">I've taken a look at your digital presence, and I’m genuinely excited. You’ve built a strong foundation, and I see some incredible opportunities for growth just waiting to be unlocked.</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-16">
+
+        <!-- Introduction Section -->
+        <section class="text-center mb-20">
+            <h3 class="section-title">A Quick Look Under the Hood</h3>
+            <p class="section-subtitle mb-8">
+                Bill, my name is Cody, and I'm with LFDM. I don't believe in generic pitches. I believe in rolling up my sleeves and finding real, actionable insights. Below is a snapshot of what I'm seeing for ForecastConsoles.com right now. This isn't about pointing out flaws; it's about identifying potential.
+            </p>
+        </section>
+
+        <!-- BI Report Section -->
+        <section id="report" class="mb-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div class="stat-card">
+                    <h4 class="text-gray-500 font-semibold text-lg mb-2">Authority Score</h4>
+                    <p class="text-5xl font-extrabold text-blue-600">19</p>
+                    <p class="text-gray-500 mt-2">A solid start with room to become a dominant voice.</p>
+                </div>
+                <div class="stat-card">
+                    <h4 class="text-gray-500 font-semibold text-lg mb-2">Organic Search Traffic</h4>
+                    <p class="text-5xl font-extrabold text-green-500">204<span class="text-2xl">/mo</span></p>
+                    <p class="text-gray-500 mt-2">Growing monthly visitors from search engines.</p>
+                </div>
+                <div class="stat-card">
+                    <h4 class="text-gray-500 font-semibold text-lg mb-2">Backlinks</h4>
+                    <p class="text-5xl font-extrabold text-indigo-500">592</p>
+                     <p class="text-gray-500 mt-2">From 195 referring domains, showing industry trust.</p>
+                </div>
+                 <div class="stat-card">
+                    <h4 class="text-gray-500 font-semibold text-lg mb-2">Branded Traffic</h4>
+                    <p class="text-5xl font-extrabold text-teal-500">90.1%</p>
+                    <p class="text-gray-500 mt-2">Your brand name is your biggest traffic driver. That's loyalty!</p>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Keywords by Intent -->
+                <div class="card">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">The "Why" Behind Your Traffic: Keyword Intent</h3>
+                    <p class="text-gray-600 mb-6">This chart shows us the motivation of your visitors. You're strong in 'Commercial' searches, which is fantastic—it means people are researching your type of product. The big opportunity? Expanding your reach for non-branded, problem-aware keywords.</p>
+                    <canvas id="intentChart"></canvas>
+                </div>
+
+                <!-- Branded vs Non-Branded -->
+                <div class="card">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Brand Recognition vs. New Discovery</h3>
+                     <p class="text-gray-600 mb-6">Over 90% of your traffic comes from people who already know your name. This is a testament to your reputation! But it also highlights a massive, untapped market: customers who have the problem you solve, but haven't heard of Forecast Consoles... yet.</p>
+                    <canvas id="brandedChart"></canvas>
+                </div>
+            </div>
+        </section>
+        
+        <!-- The Opportunity Section -->
+        <section class="text-center mb-20">
+             <h3 class="section-title">The Untapped Potential: Where You Can Win</h3>
+             <p class="section-subtitle mb-8">
+                Here's what gets me excited. Your brand is strong, but you're leaving money on the table by not capturing a wider audience.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                <div class="card border-t-4 border-green-500">
+                    <h4 class="text-xl font-bold mb-2">Dominate High-Value Keywords</h4>
+                    <p class="text-gray-600">Terms like "podcast desk" and "podcast table" have thousands of searches per month. You're on the board, but a focused SEO strategy could catapult you to the top positions, capturing traffic that is actively looking to buy.</p>
+                </div>
+                <div class="card border-t-4 border-blue-500">
+                    <h4 class="text-xl font-bold mb-2">Become the Industry Authority</h4>
+                    <p class="text-gray-600">Your competitors are visible, but none are truly dominant. By building out content that helps your potential customers (studio builders, broadcasters, podcasters), you can build trust and authority, making Forecast the default choice.</p>
+                </div>
+                <div class="card border-t-4 border-orange-500">
+                    <h4 class="text-xl font-bold mb-2">Turn Traffic into Revenue</h4>
+                    <p class="text-gray-600">With a strategic push, we can increase not just the *amount* of traffic, but the *quality*. We can target users with high commercial and transactional intent, driving more qualified leads directly to your sales team.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="bg-white rounded-2xl shadow-2xl py-16 px-8 text-center">
+            <h3 class="section-title">Ready to Stop Guessing and Start Growing?</h3>
+            <p class="section-subtitle mb-8">
+                Bill, I genuinely believe there's a clear path to significantly growing your digital footprint and, more importantly, your bottom line. I'm not here to sell you a magic bullet, but to partner with you on a data-driven strategy for success.
+            </p>
+            <p class="section-subtitle mb-12">
+                If you're open to it, I'd love to have a real, no-pressure conversation about your goals and how we can achieve them together.
+            </p>
+            <a href="https://meeting.calendarhero.com/cody" target="_blank" class="cta-button">
+                Let's Find 15 Minutes to Chat
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-20">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <img src="https://storage.googleapis.com/gemini-prod-us-west1-409903-output-scratch/img_1718815777416_0.png" alt="LFDM Logo" class="h-16 mx-auto mb-4 invert">
+            <p>&copy; 2025 LFDM. All Rights Reserved.</p>
+            <p class="text-sm text-gray-400 mt-2">This confidential report was prepared exclusively for Bill Haberman and Forecast Consoles.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Chart for Keyword Intent
+        const intentCtx = document.getElementById('intentChart').getContext('2d');
+        new Chart(intentCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Commercial (42.6%)', 'Informational (26.2%)', 'Navigational (21.3%)', 'Transactional (9.8%)'],
+                datasets: [{
+                    label: 'Keyword Intent',
+                    data: [42.6, 26.2, 21.3, 9.8],
+                    backgroundColor: [
+                        'rgba(59, 130, 246, 0.8)', // blue
+                        'rgba(16, 185, 129, 0.8)', // green
+                        'rgba(249, 115, 22, 0.8)',  // orange
+                        'rgba(99, 102, 241, 0.8)'   // indigo
+                    ],
+                    borderColor: [
+                        'rgba(59, 130, 246, 1)',
+                        'rgba(16, 185, 129, 1)',
+                        'rgba(249, 115, 22, 1)',
+                        'rgba(99, 102, 241, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed !== null) {
+                                    label += context.parsed + '%';
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Chart for Branded vs Non-Branded
+        const brandedCtx = document.getElementById('brandedChart').getContext('2d');
+        new Chart(brandedCtx, {
+            type: 'pie',
+            data: {
+                labels: ['Branded (90.1%)', 'Non-Branded (9.9%)'],
+                datasets: [{
+                    label: 'Traffic Source',
+                    data: [90.1, 9.9],
+                    backgroundColor: [
+                        'rgba(20, 83, 45, 0.8)', // dark-green
+                        'rgba(34, 197, 94, 0.8)', // green
+                    ],
+                    borderColor: [
+                        'rgba(20, 83, 45, 1)',
+                        'rgba(34, 197, 94, 1)',
+                    ],
+                    borderWidth: 1
+                }]
+            },
+             options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed !== null) {
+                                    label += context.parsed + '%';
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
