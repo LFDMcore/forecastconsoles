@@ -29,6 +29,10 @@
         .cta-button {
             @apply bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg text-xl transition-transform duration-300 transform hover:scale-105;
         }
+        /* Style for the logo in dark backgrounds */
+        .logo-dark-bg {
+             filter: invert(1);
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -37,7 +41,8 @@
     <header class="gradient-bg text-white shadow-2xl">
         <div class="container mx-auto px-6 py-8 md:py-12">
             <div class="flex justify-between items-center">
-                <img src="https://storage.googleapis.com/gemini-prod-us-west1-409903-output-scratch/img_1718815777416_0.png" alt="LFDM Logo" class="h-12 invert">
+                <!-- LOGO FIX: Using relative path and a class for styling -->
+                <img src="LFDM-LOGO.png" alt="LFDM Logo" class="h-12 logo-dark-bg">
                 <h1 class="text-xl md:text-2xl font-bold">Digital Opportunity Analysis</h1>
             </div>
             <div class="text-center py-16 md:py-24">
@@ -140,7 +145,8 @@
     <!-- Footer -->
     <footer class="bg-gray-800 text-white mt-20">
         <div class="container mx-auto px-6 py-8 text-center">
-            <img src="https://storage.googleapis.com/gemini-prod-us-west1-409903-output-scratch/img_1718815777416_0.png" alt="LFDM Logo" class="h-16 mx-auto mb-4 invert">
+            <!-- LOGO FIX: Using relative path and a class for styling -->
+            <img src="LFDM-LOGO.png" alt="LFDM Logo" class="h-16 mx-auto mb-4 logo-dark-bg">
             <p>&copy; 2025 LFDM. All Rights Reserved.</p>
             <p class="text-sm text-gray-400 mt-2">This confidential report was prepared exclusively for Bill Haberman and Forecast Consoles.</p>
         </div>
